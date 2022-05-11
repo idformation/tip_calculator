@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.6em;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+}
+
+header {
+    margin-top: 10em;
+    margin-bottom: 4em;
+    width: 4.5em;
+    font-size: 1.5em;
+    color: hsl(186, 14%, 43%);
+}
+
+main {
+    width: 56em;
+    height: 22em;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 2em;
+    height: 100%;
+    gap: 2.5em;
+}
+
+.parentUI {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 50%;
+    padding: 1em;
+}
+
+.parentResult {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 0.3em;
+    width: 50%;
+    gap: 2.5em;
+    padding: 2em;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catRes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txtRes {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.numRes {
+    font-size: 2.5em;
+    color: hsl(172, 67%, 45%);
+}
+
+.listBtn {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.reset {
+    margin-top: auto;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    height: 2.2em;
+    outline: none;
+    border-radius: 0.3em;
+    color: hsl(183, 100%, 15%);
+}
+
+.reset:active {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.resetoff {
+    margin-top: auto;
+    border: none;
+    height: 2.2em;
+    outline: none;
+    border-radius: 0.3em;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(184, 14%, 56%)
+}
+
+.perBtn {
+    color: hsl(185, 41%, 84%);
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 0.3em;
+    width: calc(33.33333333333333% - 0.5em);
+    height: 2em;
+}
+
+.perBtn:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+
+.inputSlt {
+    border-radius: 0.3em;
+    width: calc(33.33333333333333% - 0.5em);
+    height: 2em;
+    border: none;
+    outline-color: hsl(172, 67%, 45%);
+    background-color: hsl(189, 41%, 97%);
+    text-align: center; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.inputLong {
+    width: calc(100% - 1em);
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    height: 2em;
+    border-radius: 0.1em;
+    text-align: right;
+    padding-right: 1em;
+}
+
+.ico_dollars {
+    background: hsl(189, 41%, 97%) url("./images/icon-dollar.svg") no-repeat;
+    background-position: 4% 50%;
+    background-size: 4%;
+}
+
+.ico_bonhomme {
+    background: hsl(189, 41%, 97%) url("./images/icon-person.svg") no-repeat;
+    background-position: 4% 50%;
+    background-size: 4%;
+}
+
+.inputLong:focus {
+    outline: 3px solid hsl(172, 67%, 45%);
+}
+
+.sTitleOnLight {
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 0.5em;
+}
+
+.sTitleOnDark {
+    color: white;
+}
+
+.subtitle {
+    font-size: 0.8em;
+    color: hsl(186, 14%, 43%);
+}
+
+.error {
+    color: red;
+    align-self: center;
+    display: none;
+}
+
+/* FUCKING RESPONSIVE */
+
+@media only screen and (max-width: 35em) {
+
+    main {
+        width: 27em;
+        height: 46em;
+        margin-bottom: 5em;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 1em;
+        gap: 1em;
+    }
+
+    .perBtn, .inputSlt {
+        width: calc(50% - 0.5em);
+    }
+
+    .parentUI {
+        width: calc(100% - 2em);
+    }
+
+    .parentResult {
+        width: calc(100% - 4em);
+        margin-bottom: 2.5em;
+    }
+
+    .sTitleOnLight {
+        margin-top: 1em;
+    }
+}
+                            
